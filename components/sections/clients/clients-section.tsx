@@ -38,7 +38,7 @@ export function ClientsSection() {
   }, []);
 
   return (
-    <section className="py-20 bg-background">
+    <section className="hidden py-20 bg-background">
       <div className="container">
         <h2 className="text-3xl font-bold text-center mb-12">Ils nous font confiance</h2>
         <div className="relative overflow-hidden">

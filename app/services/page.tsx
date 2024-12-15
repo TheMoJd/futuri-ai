@@ -1,8 +1,5 @@
 "use client";
 
-import { Card } from "@/components/ui/card";
-import { Brain, MessageSquare, TrendingUp, Bot } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { ChatbotsSection } from "@/components/sections/chatbots";
 import { GrowthSection } from "@/components/sections/growth";
 import { AutomatedContentSection } from "@/components/sections/automated-content";

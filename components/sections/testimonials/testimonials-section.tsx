@@ -53,7 +53,7 @@ export function TestimonialsSection() {
   }, [currentIndex]);
 
   return (
-    <section className="py-20 bg-secondary/30">
+    <section className=" hidden py-20 bg-secondary/30">
       <div className="container">
         <h2 className="text-3xl font-bold text-center mb-12">Ce que disent nos clients</h2>
         <div className="relative">

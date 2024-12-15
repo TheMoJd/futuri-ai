@@ -25,9 +25,6 @@ export default function ContactPage() {
                 <Input placeholder="Nom complet" />
               </div>
               <div>
-                <Input type="email" placeholder="Email" />
-              </div>
-              <div>
                 <Input placeholder="Sujet" />
               </div>
               <div>
@@ -44,16 +41,6 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold">Téléphone</h3>
                   <p className="text-muted-foreground">07 62 78 32 76</p>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-6">
-              <div className="flex items-center gap-4">
-                <Mail className="h-6 w-6 text-primary" />
-                <div>
-                  <h3 className="font-semibold">Email</h3>
-                  <p className="text-muted-foreground">moetezjaoued@gmail.com</p>
                 </div>
               </div>
             </Card>

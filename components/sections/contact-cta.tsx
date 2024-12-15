@@ -15,7 +15,7 @@ export function ContactCTA() {
           </a>
           <a href="mailto:moetezjaoued@gmail.com" className="flex items-center gap-2">
             <Mail className="h-5 w-5" />
-            moetezjaoued@gmail.com
+            futuriiacom@gmail.com
           </a>
         </div>
         <Button variant="secondary" size="lg">
