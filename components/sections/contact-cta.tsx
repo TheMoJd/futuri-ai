@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Phone, Mail } from "lucide-react";
+import Link from "next/link";
 
 export function ContactCTA() {
   return (
@@ -18,9 +19,11 @@ export function ContactCTA() {
             futuriiacom@gmail.com
           </a>
         </div>
-        <Button variant="secondary" size="lg">
-          Démarrer votre projet
-        </Button>
+        <Link href="https://calendar.app.google/qzAMFuMg6E5uoLiAA">
+          <Button variant="secondary" size="lg">
+            Démarrer votre projet
+          </Button>
+        </Link>
       </div>
     </section>
   );

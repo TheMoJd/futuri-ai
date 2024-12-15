@@ -50,7 +50,7 @@ export default function ContactPage() {
                 <MapPin className="h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">Adresse</h3>
-                  <p className="text-muted-foreground">Paris, France</p>
+                  <p className="text-muted-foreground">Brest, France</p>
                 </div>
               </div>
             </Card>

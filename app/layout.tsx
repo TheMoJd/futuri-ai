@@ -10,6 +10,14 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Futuri AI - Solutions d\'Intelligence Artificielle',
   description: 'Agence spécialisée dans le développement de solutions d\'intelligence artificielle sur mesure pour les entreprises.',
+  icons: {
+    icon: [
+      {
+        url: '/logo.png',
+        sizes: 'any',
+      },
+    ]
+  }, 
 };
 
 export default function RootLayout({

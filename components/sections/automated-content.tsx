@@ -23,7 +23,7 @@ export function AutomatedContentSection() {
   ];
 
   return (
-    <section className="py-20 bg-primary/30">
+    <section className="py-20 bg-border">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-6">Contenu Automatisé</h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">

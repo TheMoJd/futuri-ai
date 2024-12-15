@@ -12,7 +12,7 @@ export function HeroSection() {
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
             Futuri AI
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 ">
             Propulsez votre croissance avec l&apos;intelligence artificielle
           </p>
           <Link href="/services">
