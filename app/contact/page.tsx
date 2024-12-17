@@ -8,55 +8,70 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen pt-24 pb-16">
-      <div className="container">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4">Contactez-nous</h1>
-          <p className="text-lg text-muted-foreground">
-            Nous sommes là pour répondre à vos questions et vous accompagner dans vos projets.
-          </p>
-        </div>
+    <main className="min-h-screen w-full">
+      <section className="relative w-full py-24 bg-gradient-to-b from-background to-background/80 overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none" />
+        <div className="container relative mx-auto px-6 sm:px-8">
+          <div className="space-y-16">
+            <div className="max-w-3xl mx-auto text-center space-y-4">
+              <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary animate-fade-in">
+                Contactez-nous
+              </h1>
+              <p className="text-lg text-muted-foreground animate-fade-in delay-100">
+                Nous sommes là pour répondre à vos questions et vous accompagner dans vos projets.
+              </p>
+            </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <Card className="p-8">
-            <h2 className="text-2xl font-semibold mb-6">Envoyez-nous un message</h2>
-            <form className="space-y-4">
-              <div>
-                <Input placeholder="Nom complet" />
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <div className="animate-slide-in" style={{ animationDelay: "200ms" }}>
+                <Card className="p-8 transition-all duration-300 hover:shadow-xl hover:bg-accent/5">
+                  <h2 className="text-2xl font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+                    Envoyez-nous un message
+                  </h2>
+                  <form className="space-y-4">
+                    <div className="animate-slide-in" style={{ animationDelay: "300ms" }}>
+                      <Input placeholder="Nom complet" />
+                    </div>
+                    <div className="animate-slide-in" style={{ animationDelay: "400ms" }}>
+                      <Input placeholder="Sujet" />
+                    </div>
+                    <div className="animate-slide-in" style={{ animationDelay: "500ms" }}>
+                      <Textarea placeholder="Votre message" className="min-h-[150px]" />
+                    </div>
+                    <Button className="w-full animate-slide-in" style={{ animationDelay: "600ms" }}>
+                      Envoyer
+                    </Button>
+                  </form>
+                </Card>
               </div>
-              <div>
-                <Input placeholder="Sujet" />
-              </div>
-              <div>
-                <Textarea placeholder="Votre message" className="min-h-[150px]" />
-              </div>
-              <Button className="w-full">Envoyer</Button>
-            </form>
-          </Card>
 
-          <div className="space-y-8">
-            <Card className="p-6">
-              <div className="flex items-center gap-4">
-                <Phone className="h-6 w-6 text-primary" />
-                <div>
-                  <h3 className="font-semibold">Téléphone</h3>
-                  <p className="text-muted-foreground">07 62 78 32 76</p>
-                </div>
+              <div className="space-y-8">
+                {[
+                  { icon: Phone, title: "Téléphone", content: "+33 6 XX XX XX XX" },
+                  { icon: Mail, title: "Email", content: "contact@futuri-ai.com" },
+                  { icon: MapPin, title: "Adresse", content: "Paris, France" }
+                ].map((item, index) => (
+                  <div 
+                    key={index} 
+                    className="animate-slide-in"
+                    style={{ animationDelay: `${700 + index * 100}ms` }}
+                  >
+                    <Card className="p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-accent/5">
+                      <div className="flex items-center gap-4">
+                        <item.icon className="h-8 w-8 text-primary" />
+                        <div>
+                          <h3 className="font-semibold">{item.title}</h3>
+                          <p className="text-muted-foreground">{item.content}</p>
+                        </div>
+                      </div>
+                    </Card>
+                  </div>
+                ))}
               </div>
-            </Card>
-
-            <Card className="p-6">
-              <div className="flex items-center gap-4">
-                <MapPin className="h-6 w-6 text-primary" />
-                <div>
-                  <h3 className="font-semibold">Adresse</h3>
-                  <p className="text-muted-foreground">Brest, France</p>
-                </div>
-              </div>
-            </Card>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }

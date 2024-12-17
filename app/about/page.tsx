@@ -28,45 +28,70 @@ export default function AboutPage() {
   ];
 
   return (
-    <main className="min-h-screen pt-24 pb-16 px-4 md:px-8">
-      <div className="container ">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4">À propos de Futuri AI</h1>
-          <p className="text-lg text-muted-foreground">
-            Nous sommes passionnés par l&apos;innovation et déterminés à transformer
-            le monde des entreprises grâce à l&apos;intelligence artificielle.
-          </p>
-        </div>
+    <main className="min-h-screen w-full">
+      <section className="relative w-full py-24 bg-gradient-to-b from-background to-background/80 overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none" />
+        <div className="container relative mx-auto px-6 sm:px-8">
+          <div className="space-y-16">
+            <div className="max-w-3xl mx-auto text-center space-y-4">
+              <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary animate-fade-in">
+                À propos de Futuri AI
+              </h1>
+              <p className="text-lg text-muted-foreground animate-fade-in delay-100">
+                Nous sommes passionnés par l&apos;innovation et déterminés à transformer
+                le monde des entreprises grâce à l&apos;intelligence artificielle.
+              </p>
+            </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <Card className="p-8">
-            <h2 className="text-2xl font-semibold mb-4">Notre Mission</h2>
-            <p className="text-muted-foreground">
-              Démocratiser l&apos;accès à l&apos;intelligence artificielle en proposant
-              des solutions innovantes et accessibles qui permettent aux entreprises
-              de toutes tailles de se transformer et de croître.
-            </p>
-          </Card>
-          <Card className="p-8">
-            <h2 className="text-2xl font-semibold mb-4">Notre Vision</h2>
-            <p className="text-muted-foreground">
-              Devenir le partenaire de référence des entreprises dans leur transformation
-              digitale en utilisant l&apos;IA comme levier de croissance et d&apos;innovation.
-            </p>
-          </Card>
-        </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="animate-slide-in" style={{ animationDelay: "200ms" }}>
+                <Card className="p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-accent/5">
+                  <h2 className="text-2xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+                    Notre Mission
+                  </h2>
+                  <p className="text-muted-foreground">
+                    Démocratiser l&apos;accès à l&apos;intelligence artificielle en proposant
+                    des solutions innovantes et accessibles qui permettent aux entreprises
+                    de se transformer et de croître.
+                  </p>
+                </Card>
+              </div>
+              <div className="animate-slide-in" style={{ animationDelay: "300ms" }}>
+                <Card className="p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-accent/5">
+                  <h2 className="text-2xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+                    Notre Vision
+                  </h2>
+                  <p className="text-muted-foreground">
+                    Devenir le partenaire de référence des entreprises dans leur transformation
+                    digitale en utilisant l&apos;IA comme levier de croissance et d&apos;innovation.
+                  </p>
+                </Card>
+              </div>
+            </div>
 
-        <h2 className="text-2xl font-semibold text-center mb-8">Nos Valeurs</h2>
-        <div className="grid md:grid-cols-4 gap-8">
-          {values.map((value, index) => (
-            <Card key={index} className="p-6 text-center">
-              <value.icon className="h-12 w-12 mx-auto mb-4 text-primary" />
-              <h3 className="font-semibold mb-2">{value.title}</h3>
-              <p className="text-sm text-muted-foreground">{value.description}</p>
-            </Card>
-          ))}
+            <div className="space-y-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary animate-fade-in">
+                Nos Valeurs
+              </h2>
+              <div className="grid md:grid-cols-4 gap-8">
+                {values.map((value, index) => (
+                  <div 
+                    key={index} 
+                    className="group animate-slide-in"
+                    style={{ animationDelay: `${400 + index * 100}ms` }}
+                  >
+                    <Card className="p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-accent/5">
+                      <value.icon className="h-12 w-12 mx-auto mb-4 text-primary" />
+                      <h3 className="font-semibold mb-2">{value.title}</h3>
+                      <p className="text-sm text-muted-foreground">{value.description}</p>
+                    </Card>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }

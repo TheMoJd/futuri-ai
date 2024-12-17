@@ -1,19 +1,19 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
-import { FileText, Edit, Send, Clock } from "lucide-react";
+import { FileText, Share2, Clock } from "lucide-react";
 
 export function AutomatedContentSection() {
   const features = [
     {
       icon: FileText,
-      title: "Génération de contenu",
-      description: "Créez automatiquement des articles, des blogs et d'autres contenus écrits."
+      title: "Création de contenu",
+      description: "Générez du contenu engageant et optimisé pour vos réseaux sociaux."
     },
     {
-      icon: Send,
-      title: "Publication programmée",
-      description: "Planifiez et publiez automatiquement votre contenu sur différentes plateformes."
+      icon: Share2,
+      title: "Publication automatisée",
+      description: "Planifiez et publiez automatiquement sur toutes vos plateformes."
     },
     {
       icon: Clock,
@@ -23,20 +23,34 @@ export function AutomatedContentSection() {
   ];
 
   return (
-    <section className="py-20 bg-border">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-6">Contenu Automatisé</h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Automatisez la création et la gestion de votre contenu avec nos outils d&apos;IA
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-              <feature.icon className="h-12 w-12 mb-4 text-primary" />
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
-            </Card>
-          ))}
+    <section className="relative w-full py-24 bg-gradient-to-b from-background to-background/80 overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none" />
+      <div className="container relative mx-auto px-6 sm:px-8">
+        <div className="space-y-16">
+          <div className="space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary animate-fade-in">
+              Contenu Automatisé
+            </h2>
+            <p className="text-center text-muted-foreground max-w-2xl mx-auto animate-fade-in delay-100">
+              Automatisez la création et la gestion de votre contenu avec nos outils d&apos;IA
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div 
+                key={index}
+                className="group animate-slide-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <Card className="p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-accent/5">
+                  <feature.icon className="h-12 w-12 mb-4 text-primary" />
+                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                  <p className="text-muted-foreground">{feature.description}</p>
+                </Card>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
