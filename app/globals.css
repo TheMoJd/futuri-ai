@@ -66,6 +66,13 @@
     --ring: 267 83% 36%;
   }
 }
+.logo {
+  width: 90px; /* Ajustez la taille */
+  height: 90px;
+  border-radius: 30%; /* Transforme l'image en cercle */
+  overflow: hidden; /* Cache les coins extérieurs */
+  object-fit: cover; /* Ajuste l'image au conteneur */
+}
 
 @layer base {
   

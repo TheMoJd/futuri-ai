@@ -23,7 +23,7 @@ export function GrowthSection() {
   ];
 
   return (
-    <section className="relative w-full py-24 bg-gradient-to-b from-background to-background/80 overflow-hidden">
+    <section className="relative w-full py-24 bg-gradient-to-br from-primary/5 via-secondary/5 to-background overflow-hidden rounded-3xl">
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none" />
       <div className="container relative mx-auto px-6 sm:px-8">
         <div className="space-y-16">
