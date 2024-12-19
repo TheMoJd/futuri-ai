@@ -8,8 +8,8 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen w-full">
-      <section className="relative w-full py-24 bg-gradient-to-b from-background to-background/80 overflow-hidden">
+    <main className="min-h-screen w-full overflow-hidden">
+      <section className="flex items-center justify-center py-24 bg-gradient-to-b from-background to-background/80">
         <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none" />
         <div className="container relative mx-auto px-6 sm:px-8">
           <div className="space-y-16">
@@ -23,29 +23,29 @@ export default function ContactPage() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              <div className="animate-slide-in" style={{ animationDelay: "200ms" }}>
-                <Card className="p-8 transition-all duration-300 hover:shadow-xl hover:bg-accent/5">
+              <div className="transition-transform duration-500 animate-slide-in delay-100">
+                <Card className="p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-accent/5">
                   <h2 className="text-2xl font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
                     Envoyez-nous un message
                   </h2>
                   <form className="space-y-4">
-                    <div className="animate-slide-in" style={{ animationDelay: "300ms" }}>
+                    <div className="animate-fade-in delay-300">
                       <Input placeholder="Nom complet" />
                     </div>
-                    <div className="animate-slide-in" style={{ animationDelay: "400ms" }}>
+                    <div className="animate-fade-in delay-400">
                       <Input placeholder="Sujet" />
                     </div>
-                    <div className="animate-slide-in" style={{ animationDelay: "500ms" }}>
+                    <div className="animate-fade-in delay-500">
                       <Textarea placeholder="Votre message" className="min-h-[150px]" />
                     </div>
-                    <Button className="w-full animate-slide-in" style={{ animationDelay: "600ms" }}>
+                    <Button className="w-full animate-fade-in delay-600">
                       Envoyer
                     </Button>
                   </form>
                 </Card>
               </div>
 
-              <div className="space-y-8">
+              <div className="space-y-8 animate-fade-in">
                 {[
                   { icon: Phone, title: "Téléphone", content: "+33 6 XX XX XX XX" },
                   { icon: Mail, title: "Email", content: "contact@futuri-ai.com" },
@@ -53,8 +53,8 @@ export default function ContactPage() {
                 ].map((item, index) => (
                   <div 
                     key={index} 
-                    className="animate-slide-in"
-                    style={{ animationDelay: `${700 + index * 100}ms` }}
+                    className="group animate-slide-in"
+                    style={{ animationDelay: `${index * 100}ms` }}
                   >
                     <Card className="p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-accent/5">
                       <div className="flex items-center gap-4">

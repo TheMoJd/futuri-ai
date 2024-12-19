@@ -44,7 +44,7 @@ export default function AboutPage() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="animate-slide-in" style={{ animationDelay: "200ms" }}>
+              <div className={`transition-transform duration-500 animate-slide-in delay-100`}>
                 <Card className="p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-accent/5">
                   <h2 className="text-2xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
                     Notre Mission
@@ -56,9 +56,9 @@ export default function AboutPage() {
                   </p>
                 </Card>
               </div>
-              <div className="animate-slide-in" style={{ animationDelay: "300ms" }}>
+              <div className={`transition-transform duration-500 animate-slide-in delay-100`}>
                 <Card className="p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-accent/5">
-                  <h2 className="text-2xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+                  <h2 className="text-2xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary animate-fade-in">
                     Notre Vision
                   </h2>
                   <p className="text-muted-foreground">
@@ -69,8 +69,8 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="space-y-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary animate-fade-in">
+            <div className="space-y-8 animate-fade-in">
+              <h2 className="text-3xl md:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
                 Nos Valeurs
               </h2>
               <div className="grid md:grid-cols-4 gap-8">
@@ -78,7 +78,7 @@ export default function AboutPage() {
                   <div 
                     key={index} 
                     className="group animate-slide-in"
-                    style={{ animationDelay: `${400 + index * 100}ms` }}
+                    style={{ animationDelay: `${index * 100}ms` }}
                   >
                     <Card className="p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-accent/5">
                       <value.icon className="h-12 w-12 mx-auto mb-4 text-primary" />
