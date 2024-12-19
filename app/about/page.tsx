@@ -35,7 +35,7 @@ export default function AboutPage() {
           <div className="space-y-16">
             <div className="max-w-3xl mx-auto text-center space-y-4">
               <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary animate-fade-in">
-                À propos de Futuri AI
+                Qui sommes-nous ?
               </h1>
               <p className="text-lg text-muted-foreground animate-fade-in delay-100">
                 Nous sommes passionnés par l&apos;innovation et déterminés à transformer

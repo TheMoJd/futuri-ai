@@ -47,9 +47,9 @@ export default function ContactPage() {
 
               <div className="space-y-8 animate-fade-in">
                 {[
-                  { icon: Phone, title: "Téléphone", content: "+33 6 XX XX XX XX" },
-                  { icon: Mail, title: "Email", content: "contact@futuri-ai.com" },
-                  { icon: MapPin, title: "Adresse", content: "Paris, France" }
+                  { icon: Phone, title: "Téléphone", content: "+33 7 62 78 32 76" },
+                  { icon: Mail, title: "Email", content: "futuriiacom@gmail.com"},
+                  { icon: MapPin, title: "Adresse", content: "Brest, France" }
                 ].map((item, index) => (
                   <div 
                     key={index} 
