@@ -13,21 +13,21 @@ export default function ServicesPage() {
   const { ref: automatedContentRef, isIntersecting: isAutomatedContentIntersecting } = useIntersectionObserver();
 
   return (
-    <main className="min-h-screen w-screen overflow-x-hidden">
-      <section className="w-screen pt-24 pb-16 bg-gradient-to-b from-background to-background/80 overflow-hidden">
+    <main className="min-h-screen w-screen overflow-x-hidden ">
+      <section className="flex items-center justify-center py-24 bg-gradient-to-b from-background to-background/80">
         <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none" />
-        <div className="px-6 sm:px-8">
-          <div className="space-y-16">
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary animate-fade-in">
-                Nos Services
+        <div className="container relative mx-auto px-6 sm:px-8">
+          <div className="space-y-16"> 
+            <div className="max-w-3xl mx-auto text-center space-y-4">
+              <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary animate-fade-in">
+                Nos services
               </h1>
-              <p className="text-center text-muted-foreground max-w-2xl mx-auto animate-fade-in delay-100">
+              <p className="text-lg text-muted-foreground animate-fade-in delay-100">
                 Des solutions d&apos;intelligence artificielle innovantes pour propulser votre entreprise
               </p>
             </div>
 
-            <div className="grid gap-8">
+            <div className="grid gap-16">
               <div ref={customIARef} className={`transition-transform duration-500 ${isCustomIAIntersecting ? 'animate-fade-in' : ''}`}>
                 <CustomIASolutionsSection />
               </div>

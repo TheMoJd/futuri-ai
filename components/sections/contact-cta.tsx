@@ -44,7 +44,7 @@ export function ContactCTA() {
               size="lg"
               className="text-lg px-8 py-6 transition-all duration-300 hover:scale-105 bg-primary hover:bg-primary/90"
             >
-              Démarrer votre projet
+              Profitez d'un audit IA gratuit
             </Button>
           </Link>
         </div>

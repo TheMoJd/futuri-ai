@@ -28,10 +28,10 @@ export default function AboutPage() {
   ];
 
   return (
-    <main className="min-h-screen w-full">
-      <section className="relative w-full py-24 bg-gradient-to-b from-background to-background/80 overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none" />
-        <div className="container relative mx-auto px-6 sm:px-8">
+    <main className="min-h-screen w-full overflow-hidden">
+      <section className="flex items-center justify-center py-24 bg-gradient-to-b from-background to-background/80">
+      <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none " />
+        <div className="container relative mx-auto px-6  sm:px-8">
           <div className="space-y-16">
             <div className="max-w-3xl mx-auto text-center space-y-4">
               <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary animate-fade-in">
