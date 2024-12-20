@@ -9,7 +9,7 @@ export function Header() {
 
   return (
     <header className="relative w-full top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4">
-      <div className="container flex h-24 md:h-3  items-center justify-between mx-auto">
+      <div className="container flex h-24 md:h-32  items-center justify-between mx-auto">
         <Link href="/" className="flex items-center space-x-2 animate-fade-in">
           <Image
             src="/file.png"
