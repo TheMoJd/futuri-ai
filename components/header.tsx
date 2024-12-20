@@ -2,8 +2,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/theme-toggle";
 import Image from "next/image";
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -16,7 +16,6 @@ export function Header() {
           alt="Futuri AI"
           width={80}
           height={80}
-
         />
         </Link>
 
