@@ -9,7 +9,7 @@ export function Header() {
 
   return (
     <header className="w-full top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4">
-      <div className="container flex h-32 items-center justify-between mx-auto">
+      <div className="container flex h-36 items-center justify-between mx-auto">
         <Link href="/" className="flex items-center space-x-2 animate-fade-in">
         <Image
           src="/file.png"
@@ -21,7 +21,7 @@ export function Header() {
 
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden text-muted-foreground hover:text-foreground focus:outline-none"
+          className="md:hidden text-muted-foreground hover:text-foreground focus:outline-none relative z-20"
           aria-label="Toggle menu"
         >
           <svg
@@ -42,33 +42,33 @@ export function Header() {
         <nav
           className={`${
             isMenuOpen ? "block" : "hidden"
-          } md:block absolute md:relative top-16 md:top-0 left-0 right-0 bg-background md:bg-transparent`}
+          } md:block absolute md:relative top-8 md:top-0 left-0 right-0 bg-background md:bg-transparent transition-all duration-300 ease-in-out pb-4 z-10`}
         >
           <div className="flex flex-col md:flex-row md:items-center md:space-x-8 p-4 md:p-0">
             <Link
               href="/"
-              className="text-muted-foreground text-lg hover:text-foreground block px-4 py-2 md:p-0"
+              className="text-muted-foreground text-lg hover:text-foreground block px-4 py-2 md:p-0 hover:bg-gray-200 focus:bg-gray-200"
               onClick={() => setIsMenuOpen(false)}
             >
               Accueil
             </Link>
             <Link
               href="/services"
-              className="text-muted-foreground text-lg hover:text-foreground block px-4 py-2 md:p-0"
+              className="text-muted-foreground text-lg hover:text-foreground block px-4 py-2 md:p-0 hover:bg-gray-200 focus:bg-gray-200"
               onClick={() => setIsMenuOpen(false)}
             >
               Services
             </Link>
             <Link
               href="/about"
-              className="text-muted-foreground text-lg hover:text-foreground block px-4 py-2 md:p-0"
+              className="text-muted-foreground text-lg hover:text-foreground block px-4 py-2 md:p-0 hover:bg-gray-200 focus:bg-gray-200"
               onClick={() => setIsMenuOpen(false)}
             >
               À propos
             </Link>
             <Link
               href="/contact"
-              className="text-muted-foreground text-lg hover:text-foreground block px-4 py-2 md:p-0"
+              className="text-muted-foreground text-lg hover:text-foreground block px-4 py-2 md:p-0 hover:bg-gray-200 focus:bg-gray-200"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
