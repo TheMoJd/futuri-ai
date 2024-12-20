@@ -8,15 +8,15 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="w-full top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4">
-      <div className="container flex h-36 items-center justify-between mx-auto">
+    <header className="relative w-full top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4">
+      <div className="container flex h-24 md:h-36 items-center justify-between mx-auto">        
         <Link href="/" className="flex items-center space-x-2 animate-fade-in">
-        <Image
-          src="/file.png"
-          alt="Futuri AI"
-          width={80}
-          height={80}
-        />
+          <Image
+            src="/file.png"
+            alt="Futuri AI"
+            width={60}
+            height={60}
+          />
         </Link>
 
         <button
@@ -42,7 +42,8 @@ export function Header() {
         <nav
           className={`${
             isMenuOpen ? "block" : "hidden"
-          } md:block absolute md:relative top-8 md:top-0 left-0 right-0 bg-background md:bg-transparent transition-all duration-300 ease-in-out pb-4 z-10`}
+          } md:block absolute md:relative top-2 md:top-0 left-0 right-0 
+            bg-background md:bg-transparent transition-all duration-300 ease-in-out z-10`}
         >
           <div className="flex flex-col md:flex-row md:items-center md:space-x-8 p-4 md:p-0">
             <Link
@@ -78,7 +79,7 @@ export function Header() {
 
         <div className="hidden md:flex items-center space-x-4">
           <Link href="https://calendar.app.google/qzAMFuMg6E5uoLiAA">
-            <Button size="lg" className="text-lg px-8 py-6 h-auto">
+            <Button size="lg" className="text-md px-8 py-6 h-auto">
               Audit Gratuit
             </Button>
           </Link>
@@ -88,7 +89,7 @@ export function Header() {
       {isMenuOpen && (
         <div className="flex flex-col items-start md:hidden px-4 pb-4 space-y-2">
           <Link href="https://calendar.app.google/qzAMFuMg6E5uoLiAA">
-            <Button size="lg" className="text-lg px-8 py-6 h-auto w-full">
+            <Button size="lg" className="text-md px-8 py-6 h-auto w-full">
               Audit Gratuit
             </Button>
           </Link>
