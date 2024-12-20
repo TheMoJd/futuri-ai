@@ -10,12 +10,20 @@ export function Header() {
   return (
     <header className="relative w-full top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4">
       <div className="container flex h-24 md:h-32  items-center justify-between mx-auto">
-        <Link href="/" className="flex items-center space-x-2 animate-fade-in">
+      <Link href="/" className="flex items-center space-x-2 animate-fade-in">
+          <Image
+            src="/file.png"
+            alt="Futuri AI"
+            width={80}
+            height={80}
+            className="hidden sm:block"
+          />
           <Image
             src="/file.png"
             alt="Futuri AI"
             width={60}
             height={60}
+            className="block sm:hidden"
           />
         </Link>
 
