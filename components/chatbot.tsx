@@ -2,26 +2,29 @@
 
 import { useEffect } from "react";
 
-const Chatbot = () => {
+const VoiceflowChatbot = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
     script.type = "module";
     script.onload = () => {
-      window.voiceflow.chat.load({
-        verify: { projectID: "673b0fd73d44d8e6a63420ac" },
-        url: "https://general-runtime.voiceflow.com",
-        versionID: "production",
-      });
+      if (window.voiceflow) {
+        window.voiceflow.chat.load({
+          verify: { projectID: "673b0fd73d44d8e6a63420ac" },
+          url: "https://general-runtime.voiceflow.com",
+          versionID: "production",
+        });
+      }
     };
     document.body.appendChild(script);
 
+    // Cleanup script if necessary
     return () => {
       document.body.removeChild(script);
     };
   }, []);
 
-  return null; 
+  return null; // Chatbot UI is handled by Voiceflow
 };
 
-export default Chatbot;
+export default VoiceflowChatbot;
