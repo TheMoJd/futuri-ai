@@ -1,8 +1,10 @@
+
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import  DIDAvatar  from "@/components/did-avatar";
 import Chatbot from '@/components/chatbot';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/public/logo.png',
+        url: '/logo.png',
         sizes: 'any',
       },
     ]
@@ -28,10 +30,10 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <body className={inter.className}>
-          <Header />
-          {children}
-          <Footer />
-          <Chatbot />
+        <Header />
+        {children}
+        <DIDAvatar/>  
+        <Footer />        
       </body>
     </html>
   );

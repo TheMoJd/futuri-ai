@@ -9,6 +9,15 @@ declare global {
             versionID: string;
           }) => void;
         };
+      }, 
+      DIDAgent?: {
+        init: (config: {
+          name: string;
+          mode: string;
+          clientKey: string;
+          agentId: string;
+          monitor?: boolean;
+        }) => void;
       };
     }
   }
